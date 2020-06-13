@@ -5,5 +5,6 @@
   **Prerequisite**
   - Python3.6 or higher version
   - Modern web browser
-  **Setup**
+  **Installation Guide**
+  To run this application, navigate to the command-prompt on windows pc or terminal on linuix nad run this commands:
   
