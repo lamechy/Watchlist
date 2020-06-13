@@ -7,4 +7,6 @@
   - Modern web browser
   **Installation Guide**
   To run this application, navigate to the command-prompt on windows pc or terminal on linuix nad run this commands:
-  
+  - `git clone https://github.com/lamechy/Watchlist.git`
+  - `cd watchlist`
+  *Create a virtual environment inside the watchlist directory*
