@@ -9,4 +9,6 @@
   To run this application, navigate to the command-prompt on windows pc or terminal on linuix nad run this commands:
   - `git clone https://github.com/lamechy/Watchlist.git`
   - `cd watchlist`
-  *Create a virtual environment inside the watchlist directory*
+  *Create a virtual environment(named  virtual) inside the watchlist directory*
+  - `python3.6 -m venv --without-pip virtual`
+  *Activate the virtual environment inside the watchlist directory*
