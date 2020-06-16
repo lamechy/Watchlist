@@ -16,7 +16,7 @@ def get_movies(category):
 
     with urllib.request.urlopen(get_movies_url) as url:
         get_movies_data = url.read()
-        get_movies_response = json.loads(get_movie_data)
+        get_movies_response = json.loads(get_movies_data)
 
         movie_results = None
 
@@ -28,7 +28,7 @@ def get_movies(category):
 
 def process_results(movie_list):
     '''
-    Function that processes the movieresult and transform the mto a list of Objects
+    Function that processes the movieresult and transform the into a list of Objects
 
     Args:
         movie_list: A list of dictionaries that contain movie details
