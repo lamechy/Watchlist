@@ -1,22 +1,76 @@
 {% extends 'base.html' %}
 {% import 'macros.html' as macro %}
+<!--Styles bock -->
+{% block styles %}
+    {{ super() }}
+   <link rel="stylesheet" href="{{url_for('static',filename='css/owl.carousel.min.css')}}">
+   <link rel="stylesheet" href="{{url_for('static',filename='css/linearicons.css')}}">
+   <link rel="stylesheet" href="{{url_for('static',filename='css/magnific-popup.css')}}">
+   <link rel="stylesheet" href="{{url_for('static',filename='css/animate.css')}}">
 
+   <link rel="stylesheet" href="{{url_for('static',filename='css/normalize.css')}}">
+   <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+   <link rel="stylesheet" href="{{url_for('static',filename='css/responsive.css')}}">
+   <script src="{{url_for('static',filename='js/vendor/modernizr-2.8.3.min.js')}}"></script>
+
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+{% endblock %}
+<!-- Navbar block-->
+{% block navbar %}
+    {% include 'navbar.html' %}
+{% endblock %}
+<!--Content block-->
 {% block content %}
 <!--popular movies section-->
-<h3> Popular Movies </h3>
-<ul>
-   {{ macro.displayMovieList(popular)}}
+<div class="container-fluid home-area overlay">
+    <div class="row">
+      <h3 id="popular_movies" style="text-align: center;"> Popular Movies </h3>
+      <div class="space-20"></div>
+      <ul>
+        {{ macro.displayMovieList(popular)}}
+      </ul>  
 </ul>
+      </ul>  
+    </div>
+</div>
+
+
 <!--Upcoming movies-->
-<h3> Upcoming Movies </h3>
-<ul>
-    {{ macro.displayMovieList(upcoming)}}
-</ul>
+<div class="container-fluid">
+    <div class="row">
+        <h3 style="text-align: center;" id="upcoming_movies"> Upcoming Movies </h3>
+        <div class="space-20"></div>
+        <ul>
+            {{ macro.displayMovieList(upcoming)}}
+        </ul>
+    </div>
+</div>
+
 <!--Now showing movie-->
-<h3>Now Showing</h3>
-<ul>
+<div class="container-fluid home-area overlay">
+    <div class="row">
+        <h3 id="now_showing" style="text-align: center;">Now Showing</h3>
+        <div class="space-20"></div>
+        <ul>
+            {{macro.displayMovieList(now_showing)}}   
    {{macro.displayMovieList(now_showing)}}   
-</ul>
+            {{macro.displayMovieList(now_showing)}}   
+        </ul>
+    </div>
+</div>
+<!--Plugin -JS-->
+<script src="{{url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/vendor/jquery-ui.js')}}"></script>
+<script src="{{url_for('static',filename='js/vendor/bootstrap.min.js')}}"></script>
+
+<script src="{{url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/ajaxchimp.js')}}"></script>
+<script src="{{url_for('static',filename='js/scrollUp.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/magnific-popup.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/wow.min.js')}}"></script>
+<!--Main active js-->
+<!--script src="{{url_for('static',filename='js/main.js')}}"></script-->
 
 {% endblock %}
     

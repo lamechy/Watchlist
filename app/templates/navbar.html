@@ -1,18 +1,20 @@
-<div class="navbar navbar-inverse" role="navigation">
+<nav class="mainmenu-area" data-spy="affix" data-offset-top="200">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"  data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary_menu">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>  
+                <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"> Watchlist</a>
+            <a class="navbar-brand" href="#"><img src="{{url_for('static',filename='images/tree_1.png')}}" alt="Logo"></a>
         </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
+        <div class="collapse navbar-collapse" id="primary_menu">
+            <ul class="nav navbar-nav mainmenu">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="#popular_movies"> Popular Movies</a></li>
+                <li><a href="#upcoming_movies">Upcoming Movies</a></li>
+                <li><a href="#now_showing">Now Showing</a></li>
             </ul>
         </div>
     </div>
-</div>
+</nav>
