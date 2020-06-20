@@ -4,7 +4,6 @@
 {% block styles %}
     {{ super() }}
    <link rel="stylesheet" href="{{url_for('static',filename='css/owl.carousel.min.css')}}">
-   <link rel="stylesheet" href="{{url_for('static',filename='css/linearicons.css')}}">
    <link rel="stylesheet" href="{{url_for('static',filename='css/magnific-popup.css')}}">
    <link rel="stylesheet" href="{{url_for('static',filename='css/animate.css')}}">
 
@@ -22,16 +21,19 @@
 {% endblock %}
 <!--Content block-->
 {% block content %}
+<!--Search movie form input-->
+
+
 <!--popular movies section-->
 <div class="container-fluid home-area overlay">
     <div class="row">
+        <div class="space-20"></div>
+        <div class="space-20"></div>
       <h3 id="popular_movies" style="text-align: center;"> Popular Movies </h3>
-      <div class="space-20"></div>
+     
       <ul>
         {{ macro.displayMovieList(popular)}}
-      </ul>  
-</ul>
-      </ul>  
+      </ul>   
     </div>
 </div>
 
@@ -53,9 +55,7 @@
         <h3 id="now_showing" style="text-align: center;">Now Showing</h3>
         <div class="space-20"></div>
         <ul>
-            {{macro.displayMovieList(now_showing)}}   
-   {{macro.displayMovieList(now_showing)}}   
-            {{macro.displayMovieList(now_showing)}}   
+            {{macro.displayMovieList(now_showing)}}    
         </ul>
     </div>
 </div>

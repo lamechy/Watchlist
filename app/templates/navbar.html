@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{url_for('static',filename='css/fonts.css')}}">
 <nav class="mainmenu-area" data-spy="affix" data-offset-top="200">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -14,6 +15,8 @@
                 <li><a href="#popular_movies"> Popular Movies</a></li>
                 <li><a href="#upcoming_movies">Upcoming Movies</a></li>
                 <li><a href="#now_showing">Now Showing</a></li>
+                <li><form><input type="text" name="movie_query" placeholder="Search for a Movie" class="form-control form-block" style="height: 15px;"></li>
+                <li><button type="submit" value="Submit"  class="btn btn-default "><i class="fa fa-search"> Search</i></button></form></li>
             </ul>
         </div>
     </div>
