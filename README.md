@@ -33,8 +33,9 @@ To serve this application, run this command:
 
 The application will serve at http://127.0.0.1:5000/ on your browser. 
 Incase of a *moduleNotFound* consider having this installations
-`pip install flask-wtf`
-`pip install flask-bootstrap`
+
+- `pip install flask-wtf`
+- `pip install flask-bootstrap`
 
 ##  Technologies Used
 * Python(Flask)
