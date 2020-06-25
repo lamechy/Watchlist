@@ -19,7 +19,10 @@
                     <h3>{{ movie.title }}</h3>
                     <p class="overview">{{ movie.overview}}</p>
                     <p class="ratings"><b>{{ movie.vote_average }}</b> - <i>{{ movie.vote_count }} votes</i></p>
+                    <a  class="ratings" href="/movie/review/new/{{ movie.id}}"> Write a new review</a>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-md-6">
                     <h1>Reviews</h1>
                     <hr>
@@ -27,13 +30,13 @@
                     {% if reviews %}
                         {{macro.displayReviews(reviews)}}
                     {% else %}
-                        <h3 class="text-center">This movie has no reviews yet.</h3>
+                        <h3 class="text-center">This movie has no reviews.</h3>
                         <a class="btn btn-warning btn-lg text-center" href="/movie/review/new/{{movie.id}}"> Write one here!</a>
 
                     {% endif%}
                 </div>
             </div>
-            <a  class="ratings" href="/movie/review/new/{{ movie.id}}"> Write a new review</a>
+            
         </div>
     </div>
 
